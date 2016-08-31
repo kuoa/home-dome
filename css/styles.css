@@ -33,3 +33,12 @@ footer {
   -o-border-radius: 10px;
   border-radius: 10px;
 }
+
+.thread {
+  font-size: 12px;
+}
+
+.progress {
+  width: 93%;
+  display: inline-flex;
+}
