@@ -8,5 +8,5 @@ $(document).ready(function () {
     });
 });
 
-display_reddit({limit: 10});
-
+display_reddit({limit: 25});
+display_goodreads();

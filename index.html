@@ -14,10 +14,10 @@
     </head>
     <body>
         <!-- header -->
-        <div id="top-nav" class="navbar navbar-default navbar-static-top">
+        <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">the home dome</a>
+                    <a class="navbar-brand" href="#">The Home Dome ^^</a>
                 </div>
             </div>
             <!-- /container -->
@@ -29,12 +29,12 @@
             <div class="row">
                 <div class="col-sm-2">
                     <!-- Left column -->
-                    <a href="#"><strong><i class="glyphicon glyphicon-wrench"></i>Links</strong></a>
+                    <a href="#"><strong><i class="glyphicon glyphicon-heart"></i> Daily</strong></a>
                     <hr>
 
                     <ul class="nav nav-stacked">
-                        <li class="nav-header"><a href="#">Home</a></li>
-                        <li class="nav-header"><a href="#">Goodreads</a></li>
+                        <li class="nav-header"><a href="https://mail.google.com/mail/u/0/" target="_blank"><i class="glyphicon glyphicon-envelope"></i> Mail</a></li>
+                        <li class="nav-header"><a href=""><i class="glyphicon glyphicon-book"></i> Master</a></li>
                     </ul>
 
                 </div>
@@ -42,42 +42,50 @@
                 <!-- /col-3 -->
                 <div class="col-sm-10">
 
-                    <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>
+                    <a href="#"><strong><i class="glyphicon glyphicon-globe"></i> My Kingdom</strong></a>
                     <hr>
 
                     <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="">Ask the gods</a>
+                                </div>
+
+                                <div class="panel-body">
+                                    <form method="get" action="http://www.google.com/search">
+                                        <input type="text" name="q" class="form-control" placeholder="Athena darling do tell me" autofocus/>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="goodreads-name">
+                                    <a href="https://www.goodreads.com/user/show/11674194-alexandru-al-ii-lea">
+                                        Reading <span class="badge pull-right" id="books-count">3</span>
+                                    </a>
+                                </div>
+
+                                <div class="panel-body" id="goodreads-panel" style="display: none">
+
+                                </div>
+                            </div>
+                        </div>
+
+
                         <!--/col-->
-                        <div class="col-md-6">
+                        <div class="col-md-10">
                             <div class="panel panel-default">
                                 <div class="panel-heading" id="reddit-name">
                                     <a href="https://www.reddit.com/" target="_blank">Reddit</a>
                                 </div>
                                 <div class="panel-body" id="reddit-panel" style="display: none">
 
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">Gmail <span class="badge pull-right">3</span></div>
-                                <div class="panel-body">
-                                    <li class="list-group-item"><a href="#"><i class=""></i>
-                                        <small>(3 mins ago)</small>
-                                        The 3rd page reports don't contain any links. Does anyone know why..</a></li>
-                                    <li class="list-group-item"><a href="#"><i class=""></i>
-                                        <small>(1 hour ago)</small>
-                                        Hi all, I've just post a report that show the relationship betwe..</a></li>
-                                    <li class="list-group-item"><a href="#"><i class="glyphicon glyphicon-heart"></i>
-                                        <small>(2 hrs ago)</small>
-                                        Paul. That document you posted yesterday doesn't seem to contain the over..</a>
-                                    </li>
-                                    <li class="list-group-item"><a href="#"><i class=""></i>
-                                        <small>(4 hrs ago)</small>
-                                        The map service on c243 is down today. I will be fixing the..</a></li>
-                                    <li class="list-group-item"><a href="#"><i class=""></i>
-                                        <small>(yesterday)</small>
-                                        I posted a new document that shows how to install the services layer..</a></li>
                                 </div>
                             </div>
                         </div>
@@ -90,15 +98,13 @@
         </div>
         <!-- /Main -->
 
-        <footer class="navbar navbar-fixed-bottom text-center"><a
-                href="https://github.com/kuoa"><strong>kuoa</strong></a></footer>
-
         <!-- script references -->
         <script src="js/lib/jquery-3.1.0.min.js"></script>
         <script src="js/lib/bootstrap.min.js"></script>
         <script src="js/lib/snoowrap-v1.min.js"></script>
         <script src="js/auth.js"></script>
         <script src="js/reddit.js"></script>
+        <script src="js/goodreads.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
