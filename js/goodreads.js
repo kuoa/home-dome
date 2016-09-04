@@ -1,20 +1,6 @@
-
-function display_goodreads_loading(){
-    var html_code = '<div class="progress center-block" id="goodreads-loading">' +
-        '<div class="progress-bar progress-bar-striped active" role="progressbar"' +
-        ' aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">' +
-        '</div></div>'
-
-    $('#goodreads-name').append(html_code);
-}
-
-function remove_goodreads_loading(){
-    $('#goodreads-loading').remove()
-}
-
 function display_goodreads() {
 
-    display_goodreads_loading();
+    display_loading('goodreads-loading', 'goodreads-name');
 
     $.ajax({
         url: 'http://www.goodreads.com/review/list/' + goodreads_auth_data.user_id + '.xml',
@@ -35,12 +21,16 @@ function display_goodreads() {
 }
 
 function display_books(data) {
-   $(data).find('book').each(function(){
-       display_book(this)
-   })
 
-    remove_goodreads_loading();
-    $('#goodreads-panel').show('slow')
+    var books = $(data).find('book');
+        books.each(function(){
+       display_book(this)
+   });
+
+    $('#books-count').text(books.length);
+
+    remove_loading('goodreads-loading');
+    $('#goodreads-panel').show('slow');
 }
 
 
@@ -55,6 +45,3 @@ function display_book(book){
 
     $('#goodreads-panel').append(html_code);
 }
-
-
-

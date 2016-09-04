@@ -1,21 +1,8 @@
-const reddit = new snoowrap(reddit_auth_data)
-
-function display_reddit_loading(){
-    var html_code = '<div class="progress center-block" id="reddit-loading">' +
-        '<div class="progress-bar progress-bar-striped active" role="progressbar"' +
-        ' aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:100%">' +
-        '</div></div>'
-
-    $('#reddit-name').append(html_code);
-}
-
-function remove_reddit_loading(){
-    $('#reddit-loading').remove()
-}
+const reddit = new snoowrap(reddit_auth_data);
 
 function print_threads(threads){
 
-    for (i = 0; i < threads.length; i++){
+    for (var i = 0; i < threads.length; i++){
         var thread = threads[i];
 
         var html_code = '<li class="list-group-item">' +
@@ -27,14 +14,14 @@ function print_threads(threads){
         $('#reddit-panel').append(html_code);
     }
 
-    remove_reddit_loading();
-    $('#reddit-panel').show('slow')
+    remove_loading('reddit-loading');
+    $('#reddit-panel').show('slow');
 }
 
 function display_reddit(config){
 
-    display_reddit_loading();
+    display_loading('reddit-loading', 'reddit-name');
 
     reddit.get_hot(config)
-        .then(print_threads)
+        .then(print_threads);
 }
