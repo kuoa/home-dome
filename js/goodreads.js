@@ -40,7 +40,7 @@ function display_book(book){
 
         '<h5>' + $(book).find("title").text().substring(0, 30) + '</h5>' +
         '<h6>' + $(book).find("name").text().substring(0, 10) + '</h6>' +
-        '<a href="' + ($(book).find("link").first().text()) + '"><img src="' + $(book).find("image_url").first().text() + '" class="img-rounded"/></a>' +
+        '<a target="_blank" href="' + ($(book).find("link").first().text()) + '"><img src="' + $(book).find("image_url").first().text() + '" class="img-rounded"/></a>' +
         '</div>'
 
     $('#goodreads-panel').append(html_code);

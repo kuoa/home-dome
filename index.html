@@ -14,15 +14,7 @@
     </head>
     <body>
         <!-- header -->
-        <div id="top-nav" class="navbar navbar-inverse navbar-static-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">The Home Dome ^^</a>
-                </div>
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /Header -->
+        <div id="top-nav" class="navbar navbar-inverse navbar-static-top" id="header"> </div>
 
         <!-- Main -->
         <div class="container-fluid">
@@ -46,14 +38,27 @@
                     <hr>
 
                     <div class="row">
-                        <div class="col-md-12">
+
+                        <div class="col-md-2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading" id="weather-name">
+                                    <a href="http://openweathermap.org/city/2988507" target="_blank"> Weather </a>
+                                </div>
+
+                                <div class="panel-body weather" id="weather-panel" style="display: none">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-10">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
                                     <a href="">Ask the gods</a>
                                 </div>
 
                                 <div class="panel-body">
-                                    <form method="get" action="http://www.google.com/search">
+                                    <form method="get" action="http://www.google.com/search" id="search-bar">
                                         <input type="text" name="q" class="form-control" placeholder="Athena darling do tell me" autofocus/>
                                     </form>
                                 </div>
@@ -66,7 +71,7 @@
                         <div class="col-md-2">
                             <div class="panel panel-default">
                                 <div class="panel-heading" id="goodreads-name">
-                                    <a href="https://www.goodreads.com/user/show/11674194-alexandru-al-ii-lea">
+                                    <a href="https://www.goodreads.com/user/show/11674194-alexandru-al-ii-lea" target="_blank">
                                         Reading <span class="badge pull-right" id="books-count"></span>
                                     </a>
                                 </div>
@@ -106,6 +111,7 @@
         <script src="js/common.js"></script>
         <script src="js/reddit.js"></script>
         <script src="js/goodreads.js"></script>
+        <script src="js/weather.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>

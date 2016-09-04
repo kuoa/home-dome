@@ -8,5 +8,6 @@ $(document).ready(function () {
     });
 });
 
+display_weather();
 display_reddit({limit: 16});
 display_goodreads();
